@@ -49,7 +49,8 @@ Alternatively you can run the playground on your own computer:
 ## Install and basic usage
 
 ```bash
-$ npm install --save vue-draggable-resizable
+$ npm install --save vue-draggable-resizable-vue3
+$ npm install less
 ```
 
 
@@ -58,12 +59,12 @@ Register the component globally
 ```js
 // main.js
 import { createApp } from 'vue'
-import VueDraggableResizable from 'vue-draggable-resizable'
+import { VueDraggableResizable } from 'vue-draggable-resizable-vue3'
 import App from './App.vue'
 
-createApp(App)
-  .component("vue-draggable-resizable", VueDraggableResizable)
-  .mount('#app')
+const app = createApp(App)
+app.use(VueDraggableResizable)
+app.mount('#app')
 ```
 
 You may now use the component in your markup
